@@ -1,32 +1,16 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from '../redux/operations';
-import ContactForm from './ContactForm';
-import Filter from './Filter';
-import ContactList from './ContactList';
-import Title from './Title';
-import css from './App.module.css';
-import { selectError, selectLoading } from '../redux/selectors';
-import Loader from './Loader';
-import Error from './Error';
+import { Routes, Route } from 'react-router-dom';
+import SharedLayout from '../components/SharedLayout/SharedLayout';
+import Components from '../services/lazyComponents';
 
 export function App() {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
-    <div className={css.container}>
-      <Title title="Phonebook" />
-      <ContactForm />
-      <Title title="Contacts" />
-      <Filter />
-      {isLoading && <Loader />}
-      {error ? <Error /> : <ContactList />}
-    </div>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route path="contacts" element={<Components.Contacts />} />
+        <Route path="register" element={<Components.Register />} />
+        <Route path="login" element={<Components.Login />} />
+        <Route path="*" element={<Components.Login />} />
+      </Route>
+    </Routes>
   );
 }
