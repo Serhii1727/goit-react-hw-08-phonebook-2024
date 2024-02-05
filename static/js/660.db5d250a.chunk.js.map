@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/660.db5d250a.chunk.js","mappings":"iMAIA,EAJiB,WACf,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,YACd,C","sources":["components/Register/Register.jsx"],"sourcesContent":["const Register = () => {\n  return <div>Register</div>;\n};\n\nexport default Register;\n"],"names":["_jsx","children"],"sourceRoot":""}
