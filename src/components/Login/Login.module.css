@@ -1,0 +1,121 @@
+.loginSection {
+  display: flex;
+}
+
+.loginBar {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  width: 40%;
+}
+
+.imageContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 500px;
+}
+
+.image {
+  width: 100%;
+}
+
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-bottom: 50px;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.input {
+  padding-left: 10px;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(200, 199, 199);
+}
+
+.buttonSignIn {
+  background-color: rgb(17, 135, 231);
+  border: 1px solid rgb(17, 135, 231);
+
+  color: white;
+  width: 264px;
+  height: 39px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.buttonSignIn:hover {
+  background-image: linear-gradient(
+    rgba(157, 157, 236, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+}
+
+.buttonGoogle {
+  display: inline-flex;
+  align-items: center;
+  width: 264px;
+  height: 39px;
+  border: none;
+}
+
+.icon {
+  background-color: white;
+  border-top: 1px solid rgb(200, 199, 199);
+  border-left: 1px solid rgb(200, 199, 199);
+  border-bottom: 1px solid rgb(200, 199, 199);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.textButtonGoogle {
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(66, 133, 244),
+    rgb(15, 157, 88),
+    rgb(244, 180, 0),
+    rgb(219, 68, 55)
+  );
+  color: white;
+  border-top: 1px solid rgb(233, 206, 56);
+  border-right: 1px solidrgb(233, 206, 56);
+  border-bottom: 1px solid rgb(233, 206, 56);
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonGoogle:hover > .textButtonGoogle {
+  background-image: linear-gradient(
+    to right,
+    rgb(219, 68, 55),
+    rgb(244, 180, 0),
+    rgb(15, 157, 88),
+    rgb(66, 133, 244)
+  );
+}
