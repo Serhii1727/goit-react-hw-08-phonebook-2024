@@ -10,11 +10,11 @@ const Login = () => {
       <div className={css.loginBar}>
         <h1 className={css.title}>Login</h1>
         <form className={css.formContainer}>
-          <label for="email" className={css.label}>
+          <label htmlFor="email" className={css.label}>
             Email
           </label>
           <input id="email" className={css.input}></input>
-          <label for="password" className={css.label}>
+          <label htmlFor="password" className={css.label}>
             Password
           </label>
           <input id="password" className={css.input}></input>
@@ -22,7 +22,7 @@ const Login = () => {
             Log in
           </button>
           <p className={css.p}>or</p>
-          <button className={css.buttonGoogle}>
+          <button type="button" className={css.buttonGoogle}>
             <span className={css.icon}>
               <IconContext.Provider
                 value={{ style: { height: '25px', width: '25px' } }}
