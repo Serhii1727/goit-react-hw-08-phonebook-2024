@@ -6,10 +6,11 @@ export function App() {
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
+        <Route path="/" element={<Components.Home />} />
         <Route path="contacts" element={<Components.Contacts />} />
         <Route path="register" element={<Components.Register />} />
         <Route path="login" element={<Components.Login />} />
-        <Route path="*" element={<Components.Login />} />
+        <Route path="*" element={<Components.Home />} />
       </Route>
     </Routes>
   );

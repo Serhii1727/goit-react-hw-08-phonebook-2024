@@ -9,14 +9,12 @@ const SharedLayout = () => {
       <header className={css.header}>
         <ul className={css.navList}>
           <li className={css.navItem}>
-            <NavLink to="login">Login</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className={css.navItem}>
-            <NavLink to="register">Register</NavLink>
-          </li>
-
-          <li className={css.navItem}>
-            <NavLink to="contacts">Contacts</NavLink>
+            <NavLink to="login" state={{ from: '/' }}>
+              Login
+            </NavLink>
           </li>
         </ul>
       </header>

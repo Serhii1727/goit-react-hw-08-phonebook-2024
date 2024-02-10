@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 
 const Components = {
+  Home: lazy(() => import('../components/Home/Home')),
   Contacts: lazy(() => import('../components/Contacts/Contacts')),
   Register: lazy(() => import('../components/Register')),
   Login: lazy(() => import('../components/Login/Login')),

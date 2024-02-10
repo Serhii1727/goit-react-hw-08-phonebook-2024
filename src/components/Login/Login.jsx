@@ -1,10 +1,12 @@
 import { FcGoogle } from 'react-icons/fc';
 import { IconContext } from 'react-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import image from '../../services/image/ea3d219854b076d03f3eeb276c51c24bfb74d595031e15e0f1bd09a32ab4f263.jpg';
 import css from './Login.module.css';
 
 const Login = () => {
+  const location = useLocation();
+  console.log(location.state.from);
   return (
     <div className={css.loginSection}>
       <div className={css.loginBar}>
@@ -36,11 +38,12 @@ const Login = () => {
           </button>
         </form>
         <p className={css.register}>
-          Don't have an account? <NavLink to="register">Sign up</NavLink>
+          Don't have an account?{' '}
+          <NavLink to="http://localhost:3000/register">Sign up</NavLink>
         </p>
       </div>
       <div className={css.imageContainer}>
-        <img className={css.image} src={image} alt="fhonebook" />
+        <img className={css.image} src={image} alt="phonebook" />
       </div>
     </div>
   );
