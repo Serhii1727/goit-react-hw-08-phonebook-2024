@@ -3,7 +3,7 @@ import { lazy } from 'react';
 const Components = {
   Home: lazy(() => import('../components/Home/Home')),
   Contacts: lazy(() => import('../components/Contacts/Contacts')),
-  Register: lazy(() => import('../components/Register')),
+  Register: lazy(() => import('../components/Register/Register')),
   Login: lazy(() => import('../components/Login/Login')),
   ContactForm: lazy(() => import('../components/ContactForm')),
   Filter: lazy(() => import('../components/Filter')),

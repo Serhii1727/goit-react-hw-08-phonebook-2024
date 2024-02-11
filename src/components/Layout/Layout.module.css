@@ -4,27 +4,15 @@
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-.navList {
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
-  width: 200px;
-}
-
-.navItem {
-  list-style-type: none;
-  font-weight: 800;
-  color: black;
-}
-
-.navItem:not(:last-child) {
-  margin-right: 20px;
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 900px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.userMenu {
+  display: flex;
+  margin-left: 370px;
 }

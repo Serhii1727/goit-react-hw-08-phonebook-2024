@@ -1,12 +1,10 @@
 import { FcGoogle } from 'react-icons/fc';
 import { IconContext } from 'react-icons';
-import { NavLink, useLocation } from 'react-router-dom';
-import image from '../../services/image/ea3d219854b076d03f3eeb276c51c24bfb74d595031e15e0f1bd09a32ab4f263.jpg';
+import { NavLink } from 'react-router-dom';
+import image from '../../services/images/ea3d219854b076d03f3eeb276c51c24bfb74d595031e15e0f1bd09a32ab4f263.jpg';
 import css from './Login.module.css';
 
 const Login = () => {
-  const location = useLocation();
-  console.log(location.state.from);
   return (
     <div className={css.loginSection}>
       <div className={css.loginBar}>
@@ -15,11 +13,24 @@ const Login = () => {
           <label htmlFor="email" className={css.label}>
             Email
           </label>
-          <input id="email" className={css.input}></input>
+          <input
+            type="email"
+            placeholder="email@email.com"
+            id="email"
+            required
+            className={css.input}
+          ></input>
           <label htmlFor="password" className={css.label}>
             Password
           </label>
-          <input id="password" className={css.input}></input>
+          <input
+            type="password"
+            placeholder="*******"
+            minLength={7}
+            id="password"
+            required
+            className={css.input}
+          ></input>
           <button className={css.buttonSignIn} type="submit">
             Log in
           </button>

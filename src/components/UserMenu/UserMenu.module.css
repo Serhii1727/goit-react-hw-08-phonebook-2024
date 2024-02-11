@@ -1,0 +1,34 @@
+.userMenu {
+  display: flex;
+}
+
+.authEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: orange;
+  border: 1px solid rgb(232, 173, 55);
+
+  color: white;
+  width: 134px;
+  height: 39px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    rgba(157, 157, 236, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+}

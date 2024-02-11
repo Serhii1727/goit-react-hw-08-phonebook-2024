@@ -1,0 +1,16 @@
+.navList {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.navItem {
+  list-style-type: none;
+  font-weight: 800;
+  color: black;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 20px;
+}
