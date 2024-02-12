@@ -1,13 +1,34 @@
 import css from './UserMenu.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectIsLoading,
+  selectUserData,
+} from '../../redux/auth/selectorsAuth';
+import { apiLogOutUser } from '../../redux/auth/authSlice';
 
 const UserMenu = () => {
+  const isLoading = useSelector(selectIsLoading);
+  const { email } = useSelector(selectUserData);
+  const dispatch = useDispatch();
+
+  const handleLogOut = () => {
+    dispatch(apiLogOutUser());
+  };
+
   return (
-    <div className={css.userMenu}>
-      <p className={css.authEmail}>mango@mail.com</p>
+    <>
+      <p className={css.authEmail}>{email}</p>
       <div className={css.buttonContainer}>
-        <button className={css.button}>Logout</button>
+        <button
+          onClick={handleLogOut}
+          disabled={isLoading}
+          type="button"
+          className={css.button}
+        >
+          Logout
+        </button>
       </div>
-    </div>
+    </>
   );
 };
 

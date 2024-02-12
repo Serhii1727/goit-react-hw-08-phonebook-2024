@@ -15,5 +15,5 @@ export const selectError = state => {
 };
 
 export const selectIsLoading = state => {
-  return state.autht.isLoading;
+  return state.auth.isLoading;
 };

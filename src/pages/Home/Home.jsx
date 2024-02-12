@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import css from './Home.module.css';
 import image from '../../services/images/mobile-app-go.webp';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 
 const Home = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <main>
       <section className={css.mainSection}>
@@ -13,13 +16,15 @@ const Home = () => {
           books and hello to the convenience of a digital companion that's
           always with you
         </p>
-        <div className={css.buttonContainer}>
-          <NavLink to="login">
-            <button type="button" className={css.button}>
-              Get started
-            </button>
-          </NavLink>
-        </div>
+        {!isLoggedIn && (
+          <div className={css.buttonContainer}>
+            <NavLink to="login">
+              <button type="button" className={css.button}>
+                Get started
+              </button>
+            </NavLink>
+          </div>
+        )}
 
         <img className={css.image} src={image} alt="Phonebook app" />
       </section>

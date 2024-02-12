@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 import css from './ContactListItem.module.css';
 
 export default function ContactListItem({ id, name, number }) {
@@ -12,7 +12,7 @@ export default function ContactListItem({ id, name, number }) {
   return (
     <li className={css.item}>
       <span className={css.span}>{name}</span>
-      <span>{number}</span>
+      <span className={css.span}>{number}</span>
       <div className={css.buttonContainer}>
         <button
           className={css.button__delete}
