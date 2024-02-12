@@ -1,5 +1,5 @@
-import { FcGoogle } from 'react-icons/fc';
-import { IconContext } from 'react-icons';
+// import { FcGoogle } from 'react-icons/fc';
+// import { IconContext } from 'react-icons';
 import { NavLink } from 'react-router-dom';
 import image from '../../services/images/ea3d219854b076d03f3eeb276c51c24bfb74d595031e15e0f1bd09a32ab4f263.jpg';
 import css from './Login.module.css';
@@ -74,8 +74,8 @@ const Login = () => {
           <button className={css.buttonSignIn} type="submit">
             Log in
           </button>
-          <p className={css.p}>or</p>
-          <button type="button" className={css.buttonGoogle}>
+          {/* <p className={css.p}>or</p> */}
+          {/* <button type="button" className={css.buttonGoogle}>
             <span className={css.icon}>
               <IconContext.Provider
                 value={{ style: { height: '25px', width: '25px' } }}
@@ -86,11 +86,10 @@ const Login = () => {
             <span className={css.textButtonGoogle}>
               <p> Sign in with Google</p>
             </span>
-          </button>
+          </button> */}
         </form>
         <p className={css.register}>
-          Don't have an account?{' '}
-          <NavLink to="http://localhost:3000/register">Sign up</NavLink>
+          Don't have an account? <NavLink to="/register">Sign up</NavLink>
         </p>
       </div>
       <div className={css.imageContainer}>
